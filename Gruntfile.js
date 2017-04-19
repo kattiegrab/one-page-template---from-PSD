@@ -14,11 +14,16 @@ module.exports = function(grunt) {
 	},
   htmllint: {
     all: ["demos/**/*.html", "tests/**/*.html"]
-  }
+  },
+  jshint: {
+      all: ['js/*.js']
+    }
 });
   // Load the plugins tasks 
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-html');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
+
   // Default task(s).
-  grunt.registerTask('default', ['imagemin', 'htmllint']);
+  grunt.registerTask('default', ['imagemin', 'htmllint', 'jshint']);
 };
