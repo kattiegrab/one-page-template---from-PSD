@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 	        files: [{
 	            expand: true,
 	            cwd: 'images/',
-	            src: ['**/*.{png,jpg,gif}'],
+	            src: ['images/*.{png,jpg,gif}'],
 	            dest: 'images/build/'
 	        }]
 	    }
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     all: ["demos/**/*.html", "tests/**/*.html"]
   },
   jshint: {
-      all: ['js/*.js']
+      files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
     }
 });
   // Load the plugins tasks 
